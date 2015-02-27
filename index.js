@@ -5,7 +5,7 @@ var createRedirectPage = function(destination) {
   var href = destination[0] === '/' ? destination : '/' + destination;
 
   return '<!doctype html><html><head><meta http-equiv="refresh" ' +
-  'content="1,url=' + href + '"><link rel="canonical" href="' +
+  'content="0,url=' + href + '"><link rel="canonical" href="' +
   href + '"></head>' + '<body>New location: <a href="' + href +
   '">' + href + '</a>' + '</body></html>';
 };
