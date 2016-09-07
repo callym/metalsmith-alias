@@ -4,10 +4,14 @@ var createRedirectPage = function(destination) {
   // Make sure path is absolute
   var href = destination[0] === '/' ? destination : '/' + destination;
 
-  return '<!doctype html><html><head><meta http-equiv="refresh" ' +
-  'content="0,url=' + href + '"><link rel="canonical" href="' +
-  href + '"></head>' + '<body>New location: <a href="' + href +
-  '">' + href + '</a>' + '</body></html>';
+  return `
+    <!doctype html>
+    <html>
+      <head>
+        <meta http-equiv="refresh" content="0,url=' + href + '">
+        <link rel="canonical" href="' + href + '">
+      </head>
+    </html>`;
 };
 
 module.exports = function(options) {
