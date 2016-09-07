@@ -8,8 +8,8 @@ var createRedirectPage = function(destination) {
     <!doctype html>
     <html>
       <head>
-        <meta http-equiv="refresh" content="0,url=' + href + '">
-        <link rel="canonical" href="' + href + '">
+        <meta http-equiv="refresh" content="0,url=${href}">
+        <link rel="canonical" href="${href}">
       </head>
     </html>`;
 };
